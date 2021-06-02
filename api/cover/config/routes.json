@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cover",
+      "handler": "cover.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cover",
+      "handler": "cover.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cover",
+      "handler": "cover.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
