@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "covers",
+  "info": {
+    "name": "cover",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slogan_en": {
+      "type": "string"
+    },
+    "slogan_ps": {
+      "type": "string"
+    },
+    "slogan_dr": {
+      "type": "string"
+    },
+    "quote_en": {
+      "type": "string"
+    },
+    "quate_ps": {
+      "type": "string"
+    },
+    "quote_dr": {
+      "type": "string"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
