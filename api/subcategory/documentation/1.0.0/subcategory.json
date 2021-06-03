@@ -644,7 +644,7 @@
               }
             }
           },
-          "posts": {
+          "blogs": {
             "type": "array",
             "items": {
               "required": [
@@ -660,23 +660,11 @@
                 "body_en": {
                   "type": "string"
                 },
-                "media_en": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "title_ps": {
                   "type": "string"
                 },
                 "body_ps": {
                   "type": "string"
-                },
-                "media_ps": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "title_dr": {
                   "type": "string"
@@ -684,17 +672,17 @@
                 "body_dr": {
                   "type": "string"
                 },
-                "media_dr": {
+                "media": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "subcategory": {
-                  "type": "string"
-                },
                 "order": {
                   "type": "integer"
+                },
+                "subcategory": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -734,7 +722,7 @@
                 "category": {
                   "type": "string"
                 },
-                "posts": {
+                "blogs": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -748,6 +736,9 @@
                 },
                 "slug": {
                   "type": "uid"
+                },
+                "order": {
+                  "type": "integer"
                 },
                 "published_at": {
                   "type": "string"
@@ -763,6 +754,9 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "order": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -787,7 +781,7 @@
           "category": {
             "type": "string"
           },
-          "posts": {
+          "blogs": {
             "type": "array",
             "items": {
               "type": "string"
@@ -801,6 +795,9 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "order": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",

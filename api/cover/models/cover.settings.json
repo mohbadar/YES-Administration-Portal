@@ -24,14 +24,14 @@
     "quote_en": {
       "type": "string"
     },
-    "quate_ps": {
+    "quote_ps": {
       "type": "string"
     },
     "quote_dr": {
       "type": "string"
     },
     "media": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -41,6 +41,15 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "quotee_name_en": {
+      "type": "string"
+    },
+    "quotee_name_ps": {
+      "type": "string"
+    },
+    "quotee_name_dr": {
+      "type": "string"
     }
   }
 }

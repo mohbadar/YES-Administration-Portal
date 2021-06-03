@@ -38,9 +38,9 @@
       "via": "subcategories",
       "model": "category"
     },
-    "posts": {
-      "via": "subcategory",
-      "collection": "post"
+    "blogs": {
+      "collection": "post",
+      "via": "subcategory"
     },
     "subcategories": {
       "collection": "subcategory"
@@ -48,6 +48,9 @@
     "slug": {
       "type": "uid",
       "targetField": "title_en"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
