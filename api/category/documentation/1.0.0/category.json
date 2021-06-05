@@ -626,12 +626,6 @@
                 "category": {
                   "type": "string"
                 },
-                "blogs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "subcategories": {
                   "type": "array",
                   "items": {

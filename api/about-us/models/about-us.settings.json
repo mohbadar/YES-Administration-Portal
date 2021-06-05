@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "posts",
+  "kind": "singleType",
+  "collectionName": "about_uses",
   "info": {
-    "name": "post",
-    "description": ""
+    "name": "about_us"
   },
   "options": {
     "increments": true,
@@ -30,7 +29,7 @@
     "body_dr": {
       "type": "richtext"
     },
-    "image": {
+    "media": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

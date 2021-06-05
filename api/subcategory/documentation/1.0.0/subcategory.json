@@ -644,58 +644,6 @@
               }
             }
           },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title_en": {
-                  "type": "string"
-                },
-                "body_en": {
-                  "type": "string"
-                },
-                "title_ps": {
-                  "type": "string"
-                },
-                "body_ps": {
-                  "type": "string"
-                },
-                "title_dr": {
-                  "type": "string"
-                },
-                "body_dr": {
-                  "type": "string"
-                },
-                "media": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "subcategory": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "subcategories": {
             "type": "array",
             "items": {
@@ -721,12 +669,6 @@
                 },
                 "category": {
                   "type": "string"
-                },
-                "blogs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "subcategories": {
                   "type": "array",
@@ -780,12 +722,6 @@
           },
           "category": {
             "type": "string"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "subcategories": {
             "type": "array",

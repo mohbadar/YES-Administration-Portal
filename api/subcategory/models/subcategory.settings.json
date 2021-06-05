@@ -38,10 +38,6 @@
       "via": "subcategories",
       "model": "category"
     },
-    "blogs": {
-      "collection": "post",
-      "via": "subcategory"
-    },
     "subcategories": {
       "collection": "subcategory"
     },
