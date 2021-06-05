@@ -1,8 +1,8 @@
 {
-  "kind": "singleType",
-  "collectionName": "about_uses",
+  "kind": "collectionType",
+  "collectionName": "top_youth",
   "info": {
-    "name": "about_us",
+    "name": "top_youth",
     "description": ""
   },
   "options": {
@@ -12,26 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title_en": {
+    "name_en": {
       "type": "string"
     },
-    "title_ps": {
+    "name_ps": {
       "type": "string"
     },
-    "title_dr": {
+    "name_dr": {
       "type": "string"
     },
-    "body_en": {
-      "type": "richtext"
+    "brief_en": {
+      "type": "string"
     },
-    "body_ps": {
-      "type": "richtext"
+    "brief_ps": {
+      "type": "string"
     },
-    "body_dr": {
-      "type": "richtext"
+    "brief_dr": {
+      "type": "string"
     },
-    "media": {
-      "collection": "file",
+    "photo": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -41,15 +41,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "brief_en": {
-      "type": "richtext"
-    },
-    "brief_ps": {
-      "type": "richtext"
-    },
-    "brief_dr": {
-      "type": "richtext"
     }
   }
 }

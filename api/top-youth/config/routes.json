@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/top-youths",
+      "handler": "top-youth.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-youths/count",
+      "handler": "top-youth.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/top-youths/:id",
+      "handler": "top-youth.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/top-youths",
+      "handler": "top-youth.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/top-youths/:id",
+      "handler": "top-youth.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/top-youths/:id",
+      "handler": "top-youth.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
