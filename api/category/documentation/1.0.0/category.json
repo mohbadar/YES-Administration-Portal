@@ -626,12 +626,6 @@
                 "category": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "subcategories": {
                   "type": "array",
                   "items": {
@@ -640,6 +634,9 @@
                 },
                 "slug": {
                   "type": "uid"
+                },
+                "order": {
+                  "type": "integer"
                 },
                 "published_at": {
                   "type": "string"

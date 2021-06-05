@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "covers",
+  "collectionName": "about_uses",
   "info": {
-    "name": "cover",
-    "description": ""
+    "name": "about_us"
   },
   "options": {
     "increments": true,
@@ -12,26 +11,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "slogan_en": {
+    "title_en": {
       "type": "string"
     },
-    "slogan_ps": {
+    "title_ps": {
       "type": "string"
     },
-    "slogan_dr": {
+    "title_dr": {
       "type": "string"
     },
-    "quote_en": {
-      "type": "string"
+    "body_en": {
+      "type": "richtext"
     },
-    "quote_ps": {
-      "type": "string"
+    "body_ps": {
+      "type": "richtext"
     },
-    "quote_dr": {
-      "type": "string"
+    "body_dr": {
+      "type": "richtext"
     },
     "media": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -41,15 +40,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "quotee_name_en": {
-      "type": "string"
-    },
-    "quotee_name_ps": {
-      "type": "string"
-    },
-    "quotee_name_dr": {
-      "type": "string"
     }
   }
 }

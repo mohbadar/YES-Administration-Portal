@@ -525,162 +525,22 @@
           "title_en": {
             "type": "string"
           },
-          "body_en": {
+          "title_ps": {
             "type": "string"
           },
-          "media_en": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "title_dr": {
+            "type": "string"
           },
-          "title_ps": {
+          "body_en": {
             "type": "string"
           },
           "body_ps": {
             "type": "string"
           },
-          "media_ps": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "title_dr": {
-            "type": "string"
-          },
           "body_dr": {
             "type": "string"
           },
-          "media_dr": {
+          "image": {
             "type": "array",
             "items": {
               "required": [
@@ -749,59 +609,6 @@
                 }
               }
             }
-          },
-          "subcategory": {
-            "required": [
-              "id",
-              "title_en"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title_en": {
-                "type": "string"
-              },
-              "title_ps": {
-                "type": "string"
-              },
-              "title_dr": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "posts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "subcategories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "order": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -814,26 +621,20 @@
           "title_en": {
             "type": "string"
           },
-          "body_en": {
-            "type": "string"
-          },
           "title_ps": {
-            "type": "string"
-          },
-          "body_ps": {
             "type": "string"
           },
           "title_dr": {
             "type": "string"
           },
+          "body_en": {
+            "type": "string"
+          },
+          "body_ps": {
+            "type": "string"
+          },
           "body_dr": {
             "type": "string"
-          },
-          "subcategory": {
-            "type": "string"
-          },
-          "order": {
-            "type": "integer"
           },
           "published_at": {
             "type": "string",

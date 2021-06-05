@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/cover": {
+    "/about-us": {
       "get": {
         "deprecated": false,
-        "description": "Find all the cover's records",
+        "description": "Find all the about-us's records",
         "responses": {
           "200": {
-            "description": "Retrieve cover document(s)",
+            "description": "Retrieve about-us document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Cover"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "About-us"
         ],
         "parameters": [
           {
@@ -194,14 +195,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single cover record",
+        "description": "Update a single about-us record",
         "responses": {
           "200": {
-            "description": "Retrieve cover document(s)",
+            "description": "Retrieve about-us document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Cover"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -239,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "About-us"
         ],
         "requestBody": {
           "description": "",
@@ -247,7 +252,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCover"
+                "$ref": "#/components/schemas/NewAbout-us"
               }
             }
           }
@@ -256,10 +261,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single cover record",
+        "description": "Delete a single about-us record",
         "responses": {
           "200": {
-            "description": "deletes a single cover based on the ID supplied",
+            "description": "deletes a single about-us based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,7 +307,7 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "About-us"
         ],
         "parameters": []
       }
@@ -310,7 +315,7 @@
   },
   "components": {
     "schemas": {
-      "Cover": {
+      "About-us": {
         "required": [
           "id"
         ],
@@ -318,99 +323,93 @@
           "id": {
             "type": "string"
           },
-          "slogan_en": {
+          "title_en": {
             "type": "string"
           },
-          "slogan_ps": {
+          "title_ps": {
             "type": "string"
           },
-          "slogan_dr": {
+          "title_dr": {
             "type": "string"
           },
-          "quote_en": {
+          "body_en": {
             "type": "string"
           },
-          "quote_ps": {
+          "body_ps": {
             "type": "string"
           },
-          "quote_dr": {
+          "body_dr": {
             "type": "string"
           },
           "media": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "quotee_name_en": {
-            "type": "string"
-          },
-          "quotee_name_ps": {
-            "type": "string"
-          },
-          "quotee_name_dr": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -418,33 +417,24 @@
           }
         }
       },
-      "NewCover": {
+      "NewAbout-us": {
         "properties": {
-          "slogan_en": {
+          "title_en": {
             "type": "string"
           },
-          "slogan_ps": {
+          "title_ps": {
             "type": "string"
           },
-          "slogan_dr": {
+          "title_dr": {
             "type": "string"
           },
-          "quote_en": {
+          "body_en": {
             "type": "string"
           },
-          "quote_ps": {
+          "body_ps": {
             "type": "string"
           },
-          "quote_dr": {
-            "type": "string"
-          },
-          "quotee_name_en": {
-            "type": "string"
-          },
-          "quotee_name_ps": {
-            "type": "string"
-          },
-          "quotee_name_dr": {
+          "body_dr": {
             "type": "string"
           },
           "published_at": {
@@ -461,9 +451,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Cover"
-    }
-  ]
+  "tags": []
 }

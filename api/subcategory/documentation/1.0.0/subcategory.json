@@ -644,70 +644,6 @@
               }
             }
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title_en": {
-                  "type": "string"
-                },
-                "body_en": {
-                  "type": "string"
-                },
-                "media_en": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "title_ps": {
-                  "type": "string"
-                },
-                "body_ps": {
-                  "type": "string"
-                },
-                "media_ps": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "title_dr": {
-                  "type": "string"
-                },
-                "body_dr": {
-                  "type": "string"
-                },
-                "media_dr": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "subcategory": {
-                  "type": "string"
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "subcategories": {
             "type": "array",
             "items": {
@@ -734,12 +670,6 @@
                 "category": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "subcategories": {
                   "type": "array",
                   "items": {
@@ -748,6 +678,9 @@
                 },
                 "slug": {
                   "type": "uid"
+                },
+                "order": {
+                  "type": "integer"
                 },
                 "published_at": {
                   "type": "string"
@@ -763,6 +696,9 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "order": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -787,12 +723,6 @@
           "category": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "subcategories": {
             "type": "array",
             "items": {
@@ -801,6 +731,9 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "order": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",

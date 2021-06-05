@@ -38,16 +38,15 @@
       "via": "subcategories",
       "model": "category"
     },
-    "posts": {
-      "via": "subcategory",
-      "collection": "post"
-    },
     "subcategories": {
       "collection": "subcategory"
     },
     "slug": {
       "type": "uid",
       "targetField": "title_en"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
