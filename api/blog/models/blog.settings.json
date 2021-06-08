@@ -62,7 +62,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title_en"
+      "targetField": "title_en",
+      "required": true
     }
   }
 }

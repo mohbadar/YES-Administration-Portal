@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/07/2021 4:26:50 PM"
+    "x-generation-date": "06/08/2021 9:14:45 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6139,7 +6139,8 @@
       },
       "Blog": {
         "required": [
-          "id"
+          "id",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -6258,6 +6259,9 @@
         }
       },
       "NewBlog": {
+        "required": [
+          "slug"
+        ],
         "properties": {
           "title_en": {
             "type": "string"

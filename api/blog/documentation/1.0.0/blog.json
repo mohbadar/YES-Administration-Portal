@@ -516,7 +516,8 @@
     "schemas": {
       "Blog": {
         "required": [
-          "id"
+          "id",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -635,6 +636,9 @@
         }
       },
       "NewBlog": {
+        "required": [
+          "slug"
+        ],
         "properties": {
           "title_en": {
             "type": "string"
