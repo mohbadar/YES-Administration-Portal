@@ -10,27 +10,37 @@
     "timestamps": true,
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "slogan_en": {
-      "type": "string"
+    "slogan": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
-    "slogan_ps": {
-      "type": "string"
+    "quote": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
-    "slogan_dr": {
-      "type": "string"
+    "quotee_name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
-    "quote_en": {
-      "type": "string"
-    },
-    "quote_ps": {
-      "type": "string"
-    },
-    "quote_dr": {
-      "type": "string"
-    },
-    "media": {
+    "photo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -40,16 +50,11 @@
       ],
       "plugin": "upload",
       "required": false,
-      "pluginOptions": {}
-    },
-    "quotee_name_en": {
-      "type": "string"
-    },
-    "quotee_name_ps": {
-      "type": "string"
-    },
-    "quotee_name_dr": {
-      "type": "string"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
