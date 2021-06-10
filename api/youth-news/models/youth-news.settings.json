@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "top_youth",
+  "collectionName": "youth_news",
   "info": {
-    "name": "top_youth",
+    "name": "Youth News",
     "description": ""
   },
   "options": {
@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -24,15 +24,7 @@
         }
       }
     },
-    "brief": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "description": {
+    "contents": {
       "type": "richtext",
       "pluginOptions": {
         "i18n": {

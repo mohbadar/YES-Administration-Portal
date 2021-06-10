@@ -323,25 +323,13 @@
           "id": {
             "type": "string"
           },
-          "title_en": {
+          "title": {
             "type": "string"
           },
-          "title_ps": {
+          "brief": {
             "type": "string"
           },
-          "title_dr": {
-            "type": "string"
-          },
-          "body_en": {
-            "type": "string"
-          },
-          "body_ps": {
-            "type": "string"
-          },
-          "body_dr": {
-            "type": "string"
-          },
-          "media": {
+          "photos": {
             "type": "array",
             "items": {
               "required": [
@@ -411,13 +399,56 @@
               }
             }
           },
-          "brief_en": {
+          "description": {
             "type": "string"
           },
-          "brief_ps": {
-            "type": "string"
+          "localizations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "brief": {
+                  "type": "string"
+                },
+                "photos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "description": {
+                  "type": "string"
+                },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "brief_dr": {
+          "locale": {
             "type": "string"
           },
           "published_at": {
@@ -428,31 +459,22 @@
       },
       "NewAbout-us": {
         "properties": {
-          "title_en": {
+          "title": {
             "type": "string"
           },
-          "title_ps": {
+          "brief": {
             "type": "string"
           },
-          "title_dr": {
+          "description": {
             "type": "string"
           },
-          "body_en": {
-            "type": "string"
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "body_ps": {
-            "type": "string"
-          },
-          "body_dr": {
-            "type": "string"
-          },
-          "brief_en": {
-            "type": "string"
-          },
-          "brief_ps": {
-            "type": "string"
-          },
-          "brief_dr": {
+          "locale": {
             "type": "string"
           },
           "published_at": {

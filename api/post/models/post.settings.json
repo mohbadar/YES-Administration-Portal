@@ -12,25 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title_en": {
+    "title": {
       "type": "string"
     },
-    "title_ps": {
-      "type": "string"
-    },
-    "title_dr": {
-      "type": "string"
-    },
-    "body_en": {
+    "content": {
       "type": "richtext"
     },
-    "body_ps": {
-      "type": "richtext"
-    },
-    "body_dr": {
-      "type": "richtext"
-    },
-    "image": {
+    "photos": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

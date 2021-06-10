@@ -318,25 +318,16 @@
           "id": {
             "type": "string"
           },
-          "slogan_en": {
+          "slogan": {
             "type": "string"
           },
-          "slogan_ps": {
+          "quote": {
             "type": "string"
           },
-          "slogan_dr": {
+          "quotee_name": {
             "type": "string"
           },
-          "quote_en": {
-            "type": "string"
-          },
-          "quote_ps": {
-            "type": "string"
-          },
-          "quote_dr": {
-            "type": "string"
-          },
-          "media": {
+          "photo": {
             "required": [
               "id",
               "name",
@@ -403,13 +394,50 @@
               }
             }
           },
-          "quotee_name_en": {
-            "type": "string"
+          "localizations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "slogan": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "quotee_name": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "string"
+                },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "quotee_name_ps": {
-            "type": "string"
-          },
-          "quotee_name_dr": {
+          "locale": {
             "type": "string"
           },
           "published_at": {
@@ -420,31 +448,22 @@
       },
       "NewCover": {
         "properties": {
-          "slogan_en": {
+          "slogan": {
             "type": "string"
           },
-          "slogan_ps": {
+          "quote": {
             "type": "string"
           },
-          "slogan_dr": {
+          "quotee_name": {
             "type": "string"
           },
-          "quote_en": {
-            "type": "string"
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "quote_ps": {
-            "type": "string"
-          },
-          "quote_dr": {
-            "type": "string"
-          },
-          "quotee_name_en": {
-            "type": "string"
-          },
-          "quotee_name_ps": {
-            "type": "string"
-          },
-          "quotee_name_dr": {
+          "locale": {
             "type": "string"
           },
           "published_at": {

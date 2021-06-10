@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/youth-news",
+      "handler": "youth-news.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/youth-news/count",
+      "handler": "youth-news.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/youth-news/:id",
+      "handler": "youth-news.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/youth-news",
+      "handler": "youth-news.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/youth-news/:id",
+      "handler": "youth-news.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/youth-news/:id",
+      "handler": "youth-news.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
