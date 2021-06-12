@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "name": "Applications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "nidNumber": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": false
+    },
+    "gender": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "required": true
+    },
+    "mobileNumber": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "email": {
+      "pluginOptions": {},
+      "type": "email",
+      "required": true
+    },
+    "dateOfBirth": {
+      "pluginOptions": {},
+      "type": "date"
+    },
+    "address": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "workExperience": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "languages": {
+      "pluginOptions": {},
+      "type": "text"
+    },
+    "skill": {
+      "pluginOptions": {},
+      "type": "text"
+    },
+    "CV": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "fatherName": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "academicField": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "degree": {
+      "type": "enumeration",
+      "enum": [
+        "bachelor",
+        "master",
+        "doctoral"
+      ],
+      "required": true
+    }
+  }
+}
