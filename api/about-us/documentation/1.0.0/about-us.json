@@ -402,6 +402,9 @@
           "description": {
             "type": "string"
           },
+          "vision": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -425,6 +428,9 @@
                   }
                 },
                 "description": {
+                  "type": "string"
+                },
+                "vision": {
                   "type": "string"
                 },
                 "localizations": {
@@ -466,6 +472,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "vision": {
             "type": "string"
           },
           "localizations": {
