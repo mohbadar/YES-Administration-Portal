@@ -63,6 +63,14 @@
         }
       },
       "type": "richtext"
+    },
+    "mission": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
