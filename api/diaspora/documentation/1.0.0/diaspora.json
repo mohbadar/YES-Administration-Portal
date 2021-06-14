@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/about-us": {
+    "/diaspora": {
       "get": {
         "deprecated": false,
-        "description": "Find all the about-us's records",
+        "description": "Find all the diaspora's records",
         "responses": {
           "200": {
-            "description": "Retrieve about-us document(s)",
+            "description": "Retrieve diaspora document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Diaspora"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "About-us"
+          "Diaspora"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single about-us record",
+        "description": "Update a single diaspora record",
         "responses": {
           "200": {
-            "description": "Retrieve about-us document(s)",
+            "description": "Retrieve diaspora document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Diaspora"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "About-us"
+          "Diaspora"
         ],
         "requestBody": {
           "description": "",
@@ -252,7 +247,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAbout-us"
+                "$ref": "#/components/schemas/NewDiaspora"
               }
             }
           }
@@ -261,10 +256,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single about-us record",
+        "description": "Delete a single diaspora record",
         "responses": {
           "200": {
-            "description": "deletes a single about-us based on the ID supplied",
+            "description": "deletes a single diaspora based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,7 +302,7 @@
         },
         "summary": "",
         "tags": [
-          "About-us"
+          "Diaspora"
         ],
         "parameters": []
       }
@@ -315,7 +310,7 @@
   },
   "components": {
     "schemas": {
-      "About-us": {
+      "Diaspora": {
         "required": [
           "id"
         ],
@@ -326,86 +321,16 @@
           "title": {
             "type": "string"
           },
-          "brief": {
+          "message": {
             "type": "string"
           },
-          "photos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "description": {
+          "info": {
             "type": "string"
           },
-          "vision": {
+          "link": {
             "type": "string"
           },
-          "mission": {
+          "link_name": {
             "type": "string"
           },
           "localizations": {
@@ -421,22 +346,16 @@
                 "title": {
                   "type": "string"
                 },
-                "brief": {
+                "message": {
                   "type": "string"
                 },
-                "photos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "description": {
+                "info": {
                   "type": "string"
                 },
-                "vision": {
+                "link": {
                   "type": "string"
                 },
-                "mission": {
+                "link_name": {
                   "type": "string"
                 },
                 "localizations": {
@@ -469,21 +388,21 @@
           }
         }
       },
-      "NewAbout-us": {
+      "NewDiaspora": {
         "properties": {
           "title": {
             "type": "string"
           },
-          "brief": {
+          "message": {
             "type": "string"
           },
-          "description": {
+          "info": {
             "type": "string"
           },
-          "vision": {
+          "link": {
             "type": "string"
           },
-          "mission": {
+          "link_name": {
             "type": "string"
           },
           "localizations": {
@@ -509,5 +428,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Diaspora"
+    }
+  ]
 }
