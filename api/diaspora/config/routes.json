@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/diaspora",
+      "handler": "diaspora.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/diaspora",
+      "handler": "diaspora.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/diaspora",
+      "handler": "diaspora.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
