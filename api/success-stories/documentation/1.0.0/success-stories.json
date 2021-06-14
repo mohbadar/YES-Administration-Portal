@@ -530,15 +530,10 @@
       "Success-stories": {
         "required": [
           "id",
-          "title",
-          "description",
-          "author"
+          "description"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "title": {
             "type": "string"
           },
           "description": {
@@ -614,7 +609,10 @@
               }
             }
           },
-          "author": {
+          "name": {
+            "type": "string"
+          },
+          "brief": {
             "type": "string"
           },
           "localizations": {
@@ -622,15 +620,10 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "description",
-                "author"
+                "description"
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "title": {
                   "type": "string"
                 },
                 "description": {
@@ -642,7 +635,10 @@
                     "type": "string"
                   }
                 },
-                "author": {
+                "name": {
+                  "type": "string"
+                },
+                "brief": {
                   "type": "string"
                 },
                 "localizations": {
@@ -677,18 +673,16 @@
       },
       "NewSuccess-stories": {
         "required": [
-          "title",
-          "description",
-          "author"
+          "description"
         ],
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
-          "author": {
+          "name": {
+            "type": "string"
+          },
+          "brief": {
             "type": "string"
           },
           "localizations": {

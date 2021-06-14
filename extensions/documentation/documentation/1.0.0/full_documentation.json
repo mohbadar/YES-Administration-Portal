@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/14/2021 9:56:19 AM"
+    "x-generation-date": "06/14/2021 4:20:55 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9315,15 +9315,10 @@
       "Success-stories": {
         "required": [
           "id",
-          "title",
-          "description",
-          "author"
+          "description"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "title": {
             "type": "string"
           },
           "description": {
@@ -9399,7 +9394,10 @@
               }
             }
           },
-          "author": {
+          "name": {
+            "type": "string"
+          },
+          "brief": {
             "type": "string"
           },
           "localizations": {
@@ -9407,15 +9405,10 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "description",
-                "author"
+                "description"
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "title": {
                   "type": "string"
                 },
                 "description": {
@@ -9427,7 +9420,10 @@
                     "type": "string"
                   }
                 },
-                "author": {
+                "name": {
+                  "type": "string"
+                },
+                "brief": {
                   "type": "string"
                 },
                 "localizations": {
@@ -9462,18 +9458,16 @@
       },
       "NewSuccess-stories": {
         "required": [
-          "title",
-          "description",
-          "author"
+          "description"
         ],
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
-          "author": {
+          "name": {
+            "type": "string"
+          },
+          "brief": {
             "type": "string"
           },
           "localizations": {
