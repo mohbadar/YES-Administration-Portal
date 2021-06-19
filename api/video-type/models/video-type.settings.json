@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "videos",
+  "collectionName": "video_types",
   "info": {
-    "name": "Videos",
+    "name": "Video Type",
     "description": ""
   },
   "options": {
@@ -16,25 +16,23 @@
     }
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string",
+      "required": true,
+      "unique": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "youtube_url": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     },
-    "video_type": {
-      "via": "videos",
-      "model": "video-type"
+    "videos": {
+      "via": "video_type",
+      "collection": "videos"
     }
   }
 }
