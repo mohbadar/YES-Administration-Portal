@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/video-types": {
+    "/get-in-touches": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewGet-in-touch"
               }
             }
           }
         }
       }
     },
-    "/video-types/count": {
+    "/get-in-touches/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "parameters": []
       }
     },
-    "/video-types/{id}": {
+    "/get-in-touches/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewGet-in-touch"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Get-in-touch"
         ],
         "parameters": [
           {
@@ -527,10 +527,9 @@
   },
   "components": {
     "schemas": {
-      "Video-type": {
+      "Get-in-touch": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -539,100 +538,13 @@
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "email": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "youtube_url": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "subject": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "videos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
+          "message": {
             "type": "string"
           },
           "published_at": {
@@ -641,33 +553,18 @@
           }
         }
       },
-      "NewVideo-type": {
-        "required": [
-          "name"
-        ],
+      "NewGet-in-touch": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "email": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "subject": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
+          "message": {
             "type": "string"
           },
           "published_at": {

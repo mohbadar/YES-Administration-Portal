@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/yhc-memberships",
+      "handler": "yhc-membership.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-memberships/count",
+      "handler": "yhc-membership.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-memberships/:id",
+      "handler": "yhc-membership.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/yhc-memberships",
+      "handler": "yhc-membership.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/yhc-memberships/:id",
+      "handler": "yhc-membership.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/yhc-memberships/:id",
+      "handler": "yhc-membership.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

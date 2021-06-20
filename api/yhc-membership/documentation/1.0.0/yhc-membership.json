@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/video-types": {
+    "/yhc-memberships": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewYhc-membership"
               }
             }
           }
         }
       }
     },
-    "/video-types/count": {
+    "/yhc-memberships/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "parameters": []
       }
     },
-    "/video-types/{id}": {
+    "/yhc-memberships/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewYhc-membership"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Yhc-membership"
         ],
         "parameters": [
           {
@@ -527,10 +527,9 @@
   },
   "components": {
     "schemas": {
-      "Video-type": {
+      "Yhc-membership": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -539,100 +538,25 @@
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "lastName": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "youtube_url": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "email": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
+          "mobileNumber": {
+            "type": "string"
           },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "videos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "address": {
+            "type": "string"
           },
-          "locale": {
+          "province": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "zipCode": {
             "type": "string"
           },
           "published_at": {
@@ -641,33 +565,30 @@
           }
         }
       },
-      "NewVideo-type": {
-        "required": [
-          "name"
-        ],
+      "NewYhc-membership": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "lastName": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "email": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
+          "mobileNumber": {
+            "type": "string"
           },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "address": {
+            "type": "string"
           },
-          "locale": {
+          "province": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "zipCode": {
             "type": "string"
           },
           "published_at": {

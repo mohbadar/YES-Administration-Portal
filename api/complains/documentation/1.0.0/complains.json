@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/video-types": {
+    "/complains": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the complains's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve complains document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complains"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new complains record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve complains document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Complains"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewComplains"
               }
             }
           }
         }
       }
     },
-    "/video-types/count": {
+    "/complains/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of complains documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve complains document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "parameters": []
       }
     },
-    "/video-types/{id}": {
+    "/complains/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one complains record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve complains document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Complains"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single complains record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve complains document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Complains"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVideo-type"
+                "$ref": "#/components/schemas/NewComplains"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single complains record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single complains based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Video-type"
+          "Complains"
         ],
         "parameters": [
           {
@@ -527,10 +514,9 @@
   },
   "components": {
     "schemas": {
-      "Video-type": {
+      "Complains": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
@@ -539,100 +525,13 @@
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "email": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "youtube_url": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "subject": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "videos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
+          "message": {
             "type": "string"
           },
           "published_at": {
@@ -641,33 +540,18 @@
           }
         }
       },
-      "NewVideo-type": {
-        "required": [
-          "name"
-        ],
+      "NewComplains": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
+          "email": {
+            "type": "string"
           },
-          "videos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "subject": {
+            "type": "string"
           },
-          "order": {
-            "type": "integer"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
+          "message": {
             "type": "string"
           },
           "published_at": {
@@ -684,5 +568,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Complains"
+    }
+  ]
 }
