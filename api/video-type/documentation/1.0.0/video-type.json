@@ -582,6 +582,9 @@
               }
             }
           },
+          "order": {
+            "type": "integer"
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -604,6 +607,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "order": {
+                  "type": "integer"
                 },
                 "localizations": {
                   "type": "array",
@@ -651,6 +657,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "order": {
+            "type": "integer"
           },
           "localizations": {
             "type": "array",

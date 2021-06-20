@@ -33,6 +33,14 @@
     "videos": {
       "via": "video_type",
       "collection": "videos"
+    },
+    "order": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }
