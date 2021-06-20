@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/get-in-touches",
+      "handler": "get-in-touch.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-in-touches/count",
+      "handler": "get-in-touch.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-in-touches/:id",
+      "handler": "get-in-touch.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/get-in-touches",
+      "handler": "get-in-touch.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/get-in-touches/:id",
+      "handler": "get-in-touch.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/get-in-touches/:id",
+      "handler": "get-in-touch.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

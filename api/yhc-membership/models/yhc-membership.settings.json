@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "yhc_memberships",
+  "info": {
+    "name": "YHC Membership",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "lastName": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "email": {
+      "pluginOptions": {},
+      "type": "email"
+    },
+    "mobileNumber": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "address": {
+      "pluginOptions": {},
+      "type": "text"
+    },
+    "province": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "street": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    }
+  }
+}
