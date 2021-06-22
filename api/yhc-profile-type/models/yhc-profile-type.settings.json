@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "yhc_profile_types",
+  "info": {
+    "name": "YHC Profile Type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "yhc_profiles": {
+      "via": "yhc_profile_type",
+      "collection": "yhc-profile"
+    }
+  }
+}

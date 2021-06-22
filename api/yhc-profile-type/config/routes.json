@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/yhc-profile-types",
+      "handler": "yhc-profile-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-profile-types/count",
+      "handler": "yhc-profile-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-profile-types/:id",
+      "handler": "yhc-profile-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/yhc-profile-types",
+      "handler": "yhc-profile-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/yhc-profile-types/:id",
+      "handler": "yhc-profile-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/yhc-profile-types/:id",
+      "handler": "yhc-profile-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
