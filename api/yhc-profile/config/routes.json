@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/yhc-profiles",
+      "handler": "yhc-profile.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-profiles/count",
+      "handler": "yhc-profile.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/yhc-profiles/:id",
+      "handler": "yhc-profile.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/yhc-profiles",
+      "handler": "yhc-profile.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/yhc-profiles/:id",
+      "handler": "yhc-profile.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/yhc-profiles/:id",
+      "handler": "yhc-profile.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
