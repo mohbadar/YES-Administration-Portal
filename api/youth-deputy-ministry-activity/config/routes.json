@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/youth-deputy-ministry-activities",
+      "handler": "youth-deputy-ministry-activity.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/youth-deputy-ministry-activities/count",
+      "handler": "youth-deputy-ministry-activity.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/youth-deputy-ministry-activities/:id",
+      "handler": "youth-deputy-ministry-activity.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/youth-deputy-ministry-activities",
+      "handler": "youth-deputy-ministry-activity.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/youth-deputy-ministry-activities/:id",
+      "handler": "youth-deputy-ministry-activity.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/youth-deputy-ministry-activities/:id",
+      "handler": "youth-deputy-ministry-activity.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
