@@ -601,6 +601,12 @@
               }
             }
           },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -625,6 +631,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "mobileNumber": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
                 },
                 "localizations": {
                   "type": "array",
@@ -665,6 +677,12 @@
             "type": "string"
           },
           "inventor_name": {
+            "type": "string"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "email": {
             "type": "string"
           },
           "localizations": {
