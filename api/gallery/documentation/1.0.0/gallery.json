@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/events": {
+    "/galleries": {
       "get": {
         "deprecated": false,
-        "description": "Find all the events's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve events document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Events"
+                    "$ref": "#/components/schemas/Gallery"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new events record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve events document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Events"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvents"
+                "$ref": "#/components/schemas/NewGallery"
               }
             }
           }
         }
       }
     },
-    "/events/count": {
+    "/galleries/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of events documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve events document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "parameters": []
       }
     },
-    "/events/{id}": {
+    "/galleries/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one events record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve events document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Events"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single events record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve events document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Events"
+                  "$ref": "#/components/schemas/Gallery"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvents"
+                "$ref": "#/components/schemas/NewGallery"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single events record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single events based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Events"
+          "Gallery"
         ],
         "parameters": [
           {
@@ -514,23 +514,13 @@
   },
   "components": {
     "schemas": {
-      "Events": {
+      "Gallery": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "EndDate": {
-            "type": "string",
-            "format": "date"
           },
           "photo": {
             "required": [
@@ -599,99 +589,14 @@
               }
             }
           },
-          "start_date": {
-            "type": "string",
-            "format": "date"
-          },
-          "location": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "EndDate": {
-                  "type": "string"
-                },
-                "photo": {
-                  "type": "string"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "location": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewEvents": {
+      "NewGallery": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "EndDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "start_date": {
-            "type": "string",
-            "format": "date"
-          },
-          "location": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -708,7 +613,7 @@
   },
   "tags": [
     {
-      "name": "Events"
+      "name": "Gallery"
     }
   ]
 }
