@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "perilesional_expertises",
   "info": {
-    "name": "blog",
+    "name": "Perilesional Expertise",
     "description": ""
   },
   "options": {
@@ -16,6 +16,14 @@
     }
   },
   "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "title": {
       "type": "string",
       "pluginOptions": {
@@ -24,8 +32,24 @@
         }
       }
     },
-    "author": {
+    "contents": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "mobileNumber": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "email": {
+      "type": "email",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -45,22 +69,6 @@
       "pluginOptions": {
         "i18n": {
           "localized": false
-        }
-      }
-    },
-    "brief": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "content": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
         }
       }
     }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/perilesional-expertises",
+      "handler": "perilesional-expertise.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perilesional-expertises/count",
+      "handler": "perilesional-expertise.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perilesional-expertises/:id",
+      "handler": "perilesional-expertise.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/perilesional-expertises",
+      "handler": "perilesional-expertise.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/perilesional-expertises/:id",
+      "handler": "perilesional-expertise.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/perilesional-expertises/:id",
+      "handler": "perilesional-expertise.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

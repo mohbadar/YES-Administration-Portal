@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/research-papers",
+      "handler": "research-papers.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/research-papers/count",
+      "handler": "research-papers.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/research-papers/:id",
+      "handler": "research-papers.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/research-papers",
+      "handler": "research-papers.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/research-papers/:id",
+      "handler": "research-papers.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/research-papers/:id",
+      "handler": "research-papers.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
