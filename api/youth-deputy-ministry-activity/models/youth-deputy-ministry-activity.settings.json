@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "youth_deputy_ministry_activities",
   "info": {
-    "name": "Youth Deputy Ministry Activity"
+    "name": "Youth Deputy Ministry Activity",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -35,15 +36,15 @@
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     }
