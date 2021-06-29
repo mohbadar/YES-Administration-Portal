@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/quick-links": {
+    "/surveys": {
       "get": {
         "deprecated": false,
-        "description": "Find all the quick-links's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve quick-links document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Survey"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new quick-links record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve quick-links document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Survey"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewQuick-links"
+                "$ref": "#/components/schemas/NewSurvey"
               }
             }
           }
         }
       }
     },
-    "/quick-links/count": {
+    "/surveys/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of quick-links documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve quick-links document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "parameters": []
       }
     },
-    "/quick-links/{id}": {
+    "/surveys/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one quick-links record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve quick-links document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Survey"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single quick-links record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve quick-links document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Survey"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewQuick-links"
+                "$ref": "#/components/schemas/NewSurvey"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single quick-links record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single quick-links based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Quick-links"
+          "Survey"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Quick-links": {
+      "Survey": {
         "required": [
           "id"
         ],
@@ -535,19 +522,140 @@
           "id": {
             "type": "string"
           },
-          "title_en": {
+          "title": {
             "type": "string"
           },
-          "title_dr": {
+          "description": {
             "type": "string"
-          },
-          "title_ps": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "link": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "attachment": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "attachment": {
+                  "type": "string"
+                },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "locale": {
             "type": "string"
           },
           "published_at": {
@@ -556,21 +664,32 @@
           }
         }
       },
-      "NewQuick-links": {
+      "NewSurvey": {
         "properties": {
-          "title_en": {
+          "title": {
             "type": "string"
           },
-          "title_dr": {
+          "description": {
             "type": "string"
-          },
-          "title_ps": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
           },
           "link": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "locale": {
             "type": "string"
           },
           "published_at": {
@@ -587,5 +706,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Survey"
+    }
+  ]
 }
