@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zone_elections",
+  "info": {
+    "name": "Zone Election"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "fatherName": {
+      "type": "string"
+    },
+    "nidNumber": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "originalProvince": {
+      "type": "string"
+    },
+    "originalDistrict": {
+      "type": "string"
+    },
+    "originalVillage": {
+      "type": "string"
+    },
+    "currentProvince": {
+      "type": "string"
+    },
+    "currentDistrict": {
+      "type": "string"
+    },
+    "currentVillage": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "university": {
+      "type": "string"
+    },
+    "academicField": {
+      "type": "string"
+    },
+    "qulification": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "politicalParty": {
+      "type": "text"
+    },
+    "civilSociety": {
+      "type": "text"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

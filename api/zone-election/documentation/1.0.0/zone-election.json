@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/cover": {
+    "/zone-elections": {
       "get": {
         "deprecated": false,
-        "description": "Find all the cover's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve cover document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Cover"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "Zone-election"
         ],
         "parameters": [
           {
@@ -192,16 +193,20 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single cover record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve cover document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Cover"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -239,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "Zone-election"
         ],
         "requestBody": {
           "description": "",
@@ -247,19 +252,220 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCover"
+                "$ref": "#/components/schemas/NewZone-election"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/zone-elections/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Zone-election"
+        ],
         "parameters": []
+      }
+    },
+    "/zone-elections/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zone-election"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zone-election"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewZone-election"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single cover record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single cover based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,15 +508,26 @@
         },
         "summary": "",
         "tags": [
-          "Cover"
+          "Zone-election"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "Cover": {
+      "Zone-election": {
         "required": [
           "id"
         ],
@@ -318,10 +535,75 @@
           "id": {
             "type": "string"
           },
-          "slogan": {
+          "name": {
             "type": "string"
           },
-          "quotee_name": {
+          "lastName": {
+            "type": "string"
+          },
+          "fatherName": {
+            "type": "string"
+          },
+          "nidNumber": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "age": {
+            "type": "integer"
+          },
+          "originalProvince": {
+            "type": "string"
+          },
+          "originalDistrict": {
+            "type": "string"
+          },
+          "originalVillage": {
+            "type": "string"
+          },
+          "currentProvince": {
+            "type": "string"
+          },
+          "currentDistrict": {
+            "type": "string"
+          },
+          "currentVillage": {
+            "type": "string"
+          },
+          "languages": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "university": {
+            "type": "string"
+          },
+          "academicField": {
+            "type": "string"
+          },
+          "qulification": {
+            "type": "string"
+          },
+          "job": {
+            "type": "string"
+          },
+          "politicalParty": {
+            "type": "string"
+          },
+          "civilSociety": {
             "type": "string"
           },
           "photo": {
@@ -391,79 +673,83 @@
               }
             }
           },
-          "quote": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "slogan": {
-                  "type": "string"
-                },
-                "quotee_name": {
-                  "type": "string"
-                },
-                "photo": {
-                  "type": "string"
-                },
-                "quote": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewCover": {
+      "NewZone-election": {
         "properties": {
-          "slogan": {
+          "name": {
             "type": "string"
           },
-          "quotee_name": {
+          "lastName": {
             "type": "string"
           },
-          "quote": {
+          "fatherName": {
             "type": "string"
           },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "nidNumber": {
+            "type": "string"
           },
-          "locale": {
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "age": {
+            "type": "integer"
+          },
+          "originalProvince": {
+            "type": "string"
+          },
+          "originalDistrict": {
+            "type": "string"
+          },
+          "originalVillage": {
+            "type": "string"
+          },
+          "currentProvince": {
+            "type": "string"
+          },
+          "currentDistrict": {
+            "type": "string"
+          },
+          "currentVillage": {
+            "type": "string"
+          },
+          "languages": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "university": {
+            "type": "string"
+          },
+          "academicField": {
+            "type": "string"
+          },
+          "qulification": {
+            "type": "string"
+          },
+          "job": {
+            "type": "string"
+          },
+          "politicalParty": {
+            "type": "string"
+          },
+          "civilSociety": {
             "type": "string"
           },
           "published_at": {
@@ -480,9 +766,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Cover"
-    }
-  ]
+  "tags": []
 }
