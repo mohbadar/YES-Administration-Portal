@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/provincial-elections",
+      "handler": "provincial-election.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provincial-elections/count",
+      "handler": "provincial-election.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provincial-elections/:id",
+      "handler": "provincial-election.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/provincial-elections",
+      "handler": "provincial-election.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/provincial-elections/:id",
+      "handler": "provincial-election.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/provincial-elections/:id",
+      "handler": "provincial-election.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

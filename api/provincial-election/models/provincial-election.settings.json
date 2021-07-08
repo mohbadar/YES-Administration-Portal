@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "zone_elections",
+  "collectionName": "provincial_elections",
   "info": {
-    "name": "Zone Election",
-    "description": ""
+    "name": "Provincial Election"
   },
   "options": {
     "increments": true,
@@ -70,6 +69,14 @@
     "academicField": {
       "type": "string"
     },
+    "qualification": {
+      "type": "enumeration",
+      "enum": [
+        "bachelor",
+        "master",
+        "doctoral"
+      ]
+    },
     "job": {
       "type": "text"
     },
@@ -90,14 +97,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "qualification": {
-      "type": "enumeration",
-      "enum": [
-        "bachelor",
-        "master",
-        "doctoral"
-      ]
     }
   }
 }

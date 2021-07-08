@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/district-elections",
+      "handler": "district-election.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/district-elections/count",
+      "handler": "district-election.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/district-elections/:id",
+      "handler": "district-election.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/district-elections",
+      "handler": "district-election.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/district-elections/:id",
+      "handler": "district-election.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/district-elections/:id",
+      "handler": "district-election.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

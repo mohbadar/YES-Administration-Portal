@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/zone-elections": {
+    "/district-elections": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewZone-election"
+                "$ref": "#/components/schemas/NewDistrict-election"
               }
             }
           }
         }
       }
     },
-    "/zone-elections/count": {
+    "/district-elections/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "parameters": []
       }
     },
-    "/zone-elections/{id}": {
+    "/district-elections/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewZone-election"
+                "$ref": "#/components/schemas/NewDistrict-election"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Zone-election"
+          "District-election"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Zone-election": {
+      "District-election": {
         "required": [
           "id"
         ],
@@ -593,6 +593,14 @@
           },
           "academicField": {
             "type": "string"
+          },
+          "qualification": {
+            "type": "string",
+            "enum": [
+              "bachelor",
+              "master",
+              "doctoral"
+            ]
           },
           "job": {
             "type": "string"
@@ -670,21 +678,13 @@
               }
             }
           },
-          "qualification": {
-            "type": "string",
-            "enum": [
-              "bachelor",
-              "master",
-              "doctoral"
-            ]
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewZone-election": {
+      "NewDistrict-election": {
         "properties": {
           "name": {
             "type": "string"
@@ -745,6 +745,14 @@
           "academicField": {
             "type": "string"
           },
+          "qualification": {
+            "type": "string",
+            "enum": [
+              "bachelor",
+              "master",
+              "doctoral"
+            ]
+          },
           "job": {
             "type": "string"
           },
@@ -753,14 +761,6 @@
           },
           "civilSociety": {
             "type": "string"
-          },
-          "qualification": {
-            "type": "string",
-            "enum": [
-              "bachelor",
-              "master",
-              "doctoral"
-            ]
           },
           "published_at": {
             "type": "string",

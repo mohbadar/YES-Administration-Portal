@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "zone_elections",
+  "collectionName": "district_elections",
   "info": {
-    "name": "Zone Election",
+    "name": "District Election",
     "description": ""
   },
   "options": {
@@ -70,6 +70,14 @@
     "academicField": {
       "type": "string"
     },
+    "qualification": {
+      "type": "enumeration",
+      "enum": [
+        "bachelor",
+        "master",
+        "doctoral"
+      ]
+    },
     "job": {
       "type": "text"
     },
@@ -90,14 +98,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "qualification": {
-      "type": "enumeration",
-      "enum": [
-        "bachelor",
-        "master",
-        "doctoral"
-      ]
     }
   }
 }
