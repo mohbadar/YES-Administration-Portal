@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "yhc_memberships",
   "info": {
-    "name": "YHC Membership",
+    "name": "Youth Network Membership",
     "description": ""
   },
   "options": {
@@ -20,28 +20,62 @@
       "pluginOptions": {},
       "type": "string"
     },
-    "email": {
-      "pluginOptions": {},
-      "type": "email"
+    "nidNumber": {
+      "type": "string"
+    },
+    "provinceName": {
+      "type": "string"
+    },
+    "districtName": {
+      "type": "string"
+    },
+    "villageNumber": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "birthPlace": {
+      "type": "string"
+    },
+    "qualification": {
+      "type": "enumeration",
+      "enum": [
+        "bachelor",
+        "master",
+        "doctoral"
+      ]
+    },
+    "academicField": {
+      "type": "string"
+    },
+    "university": {
+      "type": "string"
     },
     "mobileNumber": {
-      "pluginOptions": {},
       "type": "string"
     },
-    "address": {
-      "pluginOptions": {},
+    "email": {
+      "type": "email"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "jobExperiance": {
       "type": "text"
     },
-    "province": {
-      "pluginOptions": {},
-      "type": "string"
+    "socialActivity": {
+      "type": "text"
     },
-    "street": {
-      "pluginOptions": {},
-      "type": "string"
-    },
-    "zipCode": {
-      "type": "string"
+    "job": {
+      "type": "text"
     }
   }
 }

@@ -541,22 +541,62 @@
           "lastName": {
             "type": "string"
           },
-          "email": {
+          "nidNumber": {
+            "type": "string"
+          },
+          "provinceName": {
+            "type": "string"
+          },
+          "districtName": {
+            "type": "string"
+          },
+          "villageNumber": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "birthPlace": {
+            "type": "string"
+          },
+          "qualification": {
+            "type": "string",
+            "enum": [
+              "bachelor",
+              "master",
+              "doctoral"
+            ]
+          },
+          "academicField": {
+            "type": "string"
+          },
+          "university": {
             "type": "string"
           },
           "mobileNumber": {
             "type": "string"
           },
-          "address": {
+          "email": {
             "type": "string"
           },
-          "province": {
+          "languages": {
             "type": "string"
           },
-          "street": {
+          "jobExperiance": {
             "type": "string"
           },
-          "zipCode": {
+          "socialActivity": {
+            "type": "string"
+          },
+          "job": {
             "type": "string"
           },
           "published_at": {
@@ -573,22 +613,62 @@
           "lastName": {
             "type": "string"
           },
-          "email": {
+          "nidNumber": {
+            "type": "string"
+          },
+          "provinceName": {
+            "type": "string"
+          },
+          "districtName": {
+            "type": "string"
+          },
+          "villageNumber": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "birthPlace": {
+            "type": "string"
+          },
+          "qualification": {
+            "type": "string",
+            "enum": [
+              "bachelor",
+              "master",
+              "doctoral"
+            ]
+          },
+          "academicField": {
+            "type": "string"
+          },
+          "university": {
             "type": "string"
           },
           "mobileNumber": {
             "type": "string"
           },
-          "address": {
+          "email": {
             "type": "string"
           },
-          "province": {
+          "languages": {
             "type": "string"
           },
-          "street": {
+          "jobExperiance": {
             "type": "string"
           },
-          "zipCode": {
+          "socialActivity": {
+            "type": "string"
+          },
+          "job": {
             "type": "string"
           },
           "published_at": {

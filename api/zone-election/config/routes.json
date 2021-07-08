@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zone-elections",
+      "handler": "zone-election.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zone-elections/count",
+      "handler": "zone-election.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zone-elections/:id",
+      "handler": "zone-election.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zone-elections",
+      "handler": "zone-election.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zone-elections/:id",
+      "handler": "zone-election.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zone-elections/:id",
+      "handler": "zone-election.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
