@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/yhc-memberships": {
+    "/activity-categories": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewYhc-membership"
+                "$ref": "#/components/schemas/NewActivity-category"
               }
             }
           }
         }
       }
     },
-    "/yhc-memberships/count": {
+    "/activity-categories/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "parameters": []
       }
     },
-    "/yhc-memberships/{id}": {
+    "/activity-categories/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewYhc-membership"
+                "$ref": "#/components/schemas/NewActivity-category"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Yhc-membership"
+          "Activity-category"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Yhc-membership": {
+      "Activity-category": {
         "required": [
           "id"
         ],
@@ -538,68 +538,7 @@
           "name": {
             "type": "string"
           },
-          "lastName": {
-            "type": "string"
-          },
-          "nidNumber": {
-            "type": "string"
-          },
-          "provinceName": {
-            "type": "string"
-          },
-          "districtName": {
-            "type": "string"
-          },
-          "villageNumber": {
-            "type": "string"
-          },
-          "gender": {
-            "type": "string",
-            "enum": [
-              "male",
-              "female"
-            ]
-          },
-          "dateOfBirth": {
-            "type": "string",
-            "format": "date"
-          },
-          "birthPlace": {
-            "type": "string"
-          },
-          "qualification": {
-            "type": "string",
-            "enum": [
-              "bachelor",
-              "master",
-              "doctoral"
-            ]
-          },
-          "academicField": {
-            "type": "string"
-          },
-          "university": {
-            "type": "string"
-          },
-          "mobileNumber": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "languages": {
-            "type": "string"
-          },
-          "jobExperiance": {
-            "type": "string"
-          },
-          "socialActivity": {
-            "type": "string"
-          },
-          "job": {
-            "type": "string"
-          },
-          "activityCategories": {
+          "localizations": {
             "type": "array",
             "items": {
               "required": [
@@ -633,83 +572,28 @@
               }
             }
           },
+          "locale": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewYhc-membership": {
+      "NewActivity-category": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "lastName": {
-            "type": "string"
-          },
-          "nidNumber": {
-            "type": "string"
-          },
-          "provinceName": {
-            "type": "string"
-          },
-          "districtName": {
-            "type": "string"
-          },
-          "villageNumber": {
-            "type": "string"
-          },
-          "gender": {
-            "type": "string",
-            "enum": [
-              "male",
-              "female"
-            ]
-          },
-          "dateOfBirth": {
-            "type": "string",
-            "format": "date"
-          },
-          "birthPlace": {
-            "type": "string"
-          },
-          "qualification": {
-            "type": "string",
-            "enum": [
-              "bachelor",
-              "master",
-              "doctoral"
-            ]
-          },
-          "academicField": {
-            "type": "string"
-          },
-          "university": {
-            "type": "string"
-          },
-          "mobileNumber": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "languages": {
-            "type": "string"
-          },
-          "jobExperiance": {
-            "type": "string"
-          },
-          "socialActivity": {
-            "type": "string"
-          },
-          "job": {
-            "type": "string"
-          },
-          "activityCategories": {
+          "localizations": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "locale": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
