@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/social-media-icons",
+      "handler": "social-media-icon.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/social-media-icons/count",
+      "handler": "social-media-icon.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/social-media-icons/:id",
+      "handler": "social-media-icon.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/social-media-icons",
+      "handler": "social-media-icon.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/social-media-icons/:id",
+      "handler": "social-media-icon.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/social-media-icons/:id",
+      "handler": "social-media-icon.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
